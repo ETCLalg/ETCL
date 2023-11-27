@@ -244,7 +244,6 @@ def main(args):
 
     tstart=time.time()
     ## Device Setting
-    os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
     device = torch.device(f"cuda:{args.gpu}" if torch.cuda.is_available() else "cpu")
     set_seed(seed=args.seed)
 
@@ -474,7 +473,7 @@ if __name__ == "__main__":
     parser.add_argument('--lr_factor', type=int, default=2, metavar='LRF',
                         help='lr decay factor (default: 2)')
     # CUDA parameters
-    parser.add_argument('--gpu', type=str, default="1", metavar='GPU',
+    parser.add_argument('--gpu', type=str, default="0", metavar='GPU',
                         help="GPU ID for single GPU training")
     # CSNB parameters
     parser.add_argument('--sparsity', type=float, default=0.3, metavar='SPARSITY',

@@ -244,7 +244,6 @@ def main(args):
 
     tstart=time.time()
     ## Device Setting
-    os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
     device = torch.device(f"cuda:{args.gpu}" if torch.cuda.is_available() else "cpu")
     set_seed(seed=args.seed)
 

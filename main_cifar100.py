@@ -472,7 +472,7 @@ if __name__ == "__main__":
     parser.add_argument('--lr_factor', type=int, default=2, metavar='LRF',
                         help='lr decay factor (default: 2)')
     # CUDA parameters
-    parser.add_argument('--gpu', type=str, default="1", metavar='GPU',
+    parser.add_argument('--gpu', type=str, default="0", metavar='GPU',
                         help="GPU ID for single GPU training")
     # CSNB parameters
     parser.add_argument('--sparsity', type=float, default=0.5, metavar='SPARSITY',
